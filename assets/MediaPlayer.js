@@ -17,9 +17,9 @@ MediaPlayer.prototype.pause = function () {
 };
 MediaPlayer.prototype.togglePlay = function () {
   if (this.media.paused) {
-    this.media.play();
+    this.play();
   } else {
-    this.media.pause();
+    this.pause();
   }
 };
 MediaPlayer.prototype.mute = function() {
@@ -27,6 +27,13 @@ MediaPlayer.prototype.mute = function() {
 }
 MediaPlayer.prototype.unmute = function() {
   this.media.muted = false
+}
+MediaPlayer.prototype.toggleMute = function() {
+  if (this.media.muted) {
+    this.unmute();
+  } else {
+    this.mute();
+  }
 }
 
 export default MediaPlayer
