@@ -80,7 +80,7 @@ class Ads {
     this.initAds()
   }
   static getInstance() {
-    if (Ads.instance === null) {
+    if (!Ads.instance) {
       Ads.instance = new Ads()
     }
     return Ads.instance
